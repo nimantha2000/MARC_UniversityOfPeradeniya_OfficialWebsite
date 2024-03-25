@@ -161,7 +161,7 @@
                     <!-- Blog Detail End -->
 
                     <!-- Comment List Start -->
-                    <div class="mb-5">
+                    <!-- <div class="mb-5">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="mb-0">3 Comments</h3>
                         </div>
@@ -191,31 +191,31 @@
                                     accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed eirmod</p>
                                 <button class="btn btn-sm btn-light">Reply</button>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                     <!-- Comment List End -->
 
                     <!-- Comment Form Start -->
-                    <div class="bg-light rounded p-5">
+                    <!-- <div class="bg-light rounded p-5">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="mb-0">Leave A Comment</h3>
                         </div>
-                        <form>
+                        <form id="comment-form">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-white border-0"
+                                    <input type="text" id="name" class="form-control bg-white border-0"
                                         placeholder="Your Name" style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control bg-white border-0"
+                                    <input type="email" id="email" class="form-control bg-white border-0"
                                         placeholder="Your Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control bg-white border-0" placeholder="Website"
-                                        style="height: 55px;">
+                                    <input type="text" id="website" class="form-control bg-white border-0"
+                                        placeholder="Website" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-white border-0" rows="5"
+                                    <textarea id="comment" class="form-control bg-white border-0" rows="5"
                                         placeholder="Comment"></textarea>
                                 </div>
                                 <div class="col-12">
@@ -223,7 +223,7 @@
                                         Comment</button>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                     <!-- Comment Form End -->
                 </div>
@@ -393,6 +393,40 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to handle form submission
+            document.getElementById('comment-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Get form values
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var website = document.getElementById('website').value;
+                var comment = document.getElementById('comment').value;
+
+                // Create a new comment element
+                var newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.innerHTML = `
+                    <div class="author">${name}</div>
+                    <div class="metadata">${email} | ${website}</div>
+                    <div class="content">${comment}</div>
+                `;
+
+                // Append the new comment to the comment list
+                document.getElementById('comment-list').appendChild(newComment);
+
+                // Clear form fields
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('website').value = '';
+                document.getElementById('comment').value = '';
+            });
+        });
+    </script>
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
