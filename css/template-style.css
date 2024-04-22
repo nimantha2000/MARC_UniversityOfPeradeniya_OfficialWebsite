@@ -2496,3 +2496,11 @@ a.background-aqua:link,
     background-position: center;
   }
 }
+
+.zoomable {
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoomable:hover {
+  transform: scale(1.1); /* Zoom in by 10% */
+}
