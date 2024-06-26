@@ -1,6 +1,6 @@
 # MARC Official Web
 
-## Thechnologies
-# HTML
-# CSS
-# Java Scripts
+## Technologies
+HTML
+CSS
+Java Scripts
