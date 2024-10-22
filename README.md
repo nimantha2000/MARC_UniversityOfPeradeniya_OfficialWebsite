@@ -50,6 +50,31 @@ Once the repository is cloned, you can customize the content as needed:
 - **CSS Files:** Modify the styles in `styles.css` located in the `css` folder.
 - **JavaScript Files:** Adjust any interactive elements by editing the JavaScript files located in the `js` folder.
 
+## Screenshots
+![screenshot 1](screenshots/ss1.png)
+<br>
+<br>
+![screenshot 2](screenshots/ss2.png)
+<br>
+<br>
+![screenshot 3](screenshots/ss3.png)
+<br>
+<br>
+![screenshot 4](screenshots/ss4.png)
+<br>
+<br>
+![screenshot 5](screenshots/s51.png)
+<br>
+<br>
+![screenshot 6](screenshots/ss6.png)
+<br>
+<br>
+![screenshot 7](screenshots/ss7.png)
+<br>
+<br>
+![screenshot 8](screenshots/ss8.png)
+
+
 ## Folder Structure
 
 ```bash
@@ -65,3 +90,6 @@ Once the repository is cloned, you can customize the content as needed:
 └── assets/
     ├── images/          # Image assets
     └── fonts/           # Font files
+
+
+
