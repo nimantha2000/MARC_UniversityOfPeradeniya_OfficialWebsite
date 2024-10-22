@@ -22,7 +22,7 @@ This repository contains the code for the official website of the Multidisciplin
 
 ## Technologies Used
 
-- **HTML5:** For structuring content on the website.
+- **HTML5:**  For structuring content on the website.
 - **CSS3:** For styling and layout design.
 - **JavaScript:** For interactivity and dynamic content.
 - **Responsive Design:** Ensures the site is accessible and functional across a range of devices.
